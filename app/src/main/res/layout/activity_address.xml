@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddressActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvInformation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/tvInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Information"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:hint="Phone Number"
+        android:layout_marginStart="50dp"
+        android:enabled="false"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvInformation" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="(+84)"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/edPhoneNumber"
+        app:layout_constraintEnd_toStartOf="@+id/edPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+        app:layout_constraintTop_toTopOf="@+id/edPhoneNumber" />
+
+    <EditText
+        android:id="@+id/edUsername"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Username"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+        app:layout_constraintTop_toBottomOf="@id/edPhoneNumber"
+
+        />
+
+    <EditText
+        android:id="@+id/edInf0"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Street Name"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/edUsername"
+
+        />
+
+    <EditText
+        android:id="@+id/edInf1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Ward / Town "
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/edInf0"
+
+        />
+
+    <EditText
+        android:id="@+id/edInf2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="County / District"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/edInf1"
+
+        />
+
+    <EditText
+        android:id="@+id/edInf3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Province / City"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/edInf2"
+
+        />
+
+    <EditText
+        android:id="@+id/edInf"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Note here ..."
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/edInf3"
+
+        />
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/black"
+        android:text="Proceed to checkout"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLoginLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLoginRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.91" />
+</androidx.constraintlayout.widget.ConstraintLayout>
